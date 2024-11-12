@@ -7,7 +7,8 @@ __pycache__/
 .idea/
 .vscode/
 
-# Ignorar bases de datos locales (si las usas)
+# Ignorar archivos de bases de datos
+*.sql
 *.sqlite
 *.db
 
