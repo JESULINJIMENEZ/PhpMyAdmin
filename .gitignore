@@ -1,5 +1,6 @@
 # Ignorar entornos virtuales
-
+venv/
+env/
 __pycache__/
 
 # Ignorar archivos de configuración del editor
