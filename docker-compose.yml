@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+      MYSQL_DATABASE: techO
+    ports:
+      - "3306:3306"
+    networks:
+      - mi_proyecto_docker_backend_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_container
+    environment:
+      PMA_HOST: mysql  # El nombre del servicio debe ser "mysql", no "localhost"
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "8081:80"
+    networks:
+      - mi_proyecto_docker_backend_network
+
+networks:
+  mi_proyecto_docker_backend_network:
+    external: true

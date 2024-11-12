@@ -1,0 +1,18 @@
+# Ignorar entornos virtuales
+
+__pycache__/
+
+# Ignorar archivos de configuración del editor
+.idea/
+.vscode/
+
+# Ignorar bases de datos locales (si las usas)
+*.sqlite
+*.db
+
+# Ignorar archivos temporales generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de configuración de dependencias específicas (ejemplo Node.js)
+node_modules/
